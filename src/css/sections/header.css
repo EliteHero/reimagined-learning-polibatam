@@ -1,0 +1,41 @@
+.header__nav {
+    display: flex;
+    overflow: hidden;
+    justify-content: space-between;
+    align-items: center;
+
+    margin: 0 5rem;
+}
+
+.header__logo-container {
+    flex: 1;
+    flex-shrink: 0;
+}
+
+.header__logo-container img {
+    width: 35%;
+    height: auto;
+}
+
+.header__list {
+    display: flex;
+    flex: 2;
+    justify-content: flex-end;
+    gap: 7rem;
+
+    font-family: var(--plus-jakarta-sans);
+    font-size: 1rem;
+
+    list-style: none;
+}
+
+.header__list-masuk{
+    display: flex;
+}
+
+.header__list-masuk img {
+    width: 25%;
+    height: 25%;
+
+    margin-right: 1rem;
+}

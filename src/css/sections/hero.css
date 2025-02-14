@@ -2,12 +2,8 @@
     display: flex;
     width: 100%;
 
-    position: absolute;
-    top: 0;
     z-index: -1;
     overflow: hidden;
-
-    /* padding: 0 5rem; */
 }
 
 .hero__content {
@@ -41,6 +37,7 @@
 .hero__image {
     flex: 1;
     position: relative;
+    z-index: -1;
 }
 
 .hero__image-gradient {

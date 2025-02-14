@@ -1,7 +1,13 @@
-header {
+.header {
     position: fixed;
     top: 0;
     width: 100%;
+    transition: all 0.5s;
+}
+
+.header-scrolled {
+    background-color: white;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
 }
 
 .header__nav {
@@ -52,6 +58,7 @@ header {
 .header__list-masuk img {
     width: 25%;
     height: 25%;
+    margin-right: 0.5rem;
 }
 
 .header__list-mobile {

@@ -2,6 +2,7 @@
 
 @import url(sections/header.css);
 @import url(sections/hero.css);
+@import url(sections/panduan.css);
 
 :root {
     --plus-jakarta-sans: "Plus Jakarta Sans", sans-serif;
@@ -16,7 +17,11 @@
 
 * {
     box-sizing: border-box;
-  }
+}
+
+html {
+    scroll-behavior: smooth;
+}
 
 body {
     position: relative;
@@ -31,8 +36,8 @@ a {
 
 p {
     font-family: var(--plus-jakarta-sans);
-    font-size: clamp(1rem, 2vw, 1.5rem);
-    line-height: 1.4;
+    font-size: clamp(1rem, 2vw, 1.25rem);
+    line-height: 1.5;
 }
 
 h1 {
@@ -43,6 +48,14 @@ h1 {
     line-height: 1.2;
 
     margin: 0;
+}
+
+
+h3 {
+    font-family: var(--plus-jakarta-sans);
+    font-size: clamp(1rem, 2vw, 1.5rem);
+    font-weight: normal;
+    line-height: 1.4;
 }
 
 /* START: header media query */
@@ -68,7 +81,13 @@ h1 {
     }
     
     .header__list-mobile {
+        display: block;
+    }
+
+    .header__list-mobile button {
         display: flex;
+        justify-content: flex-end;
+        padding: 0;
     }
 }
 /* END: header media query */
@@ -114,3 +133,33 @@ h1 {
         padding-left: 0;
     }
 }
+/* END: hero media query */
+
+
+/* START: panduan media query */
+@media screen and (max-width: 1024px) {
+    .panduan {
+        flex-direction: column;
+        align-items: center;
+
+        margin: 10rem 1rem;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .panduan__content-title {
+        flex-direction: column;
+        align-items: center;
+
+        text-align: center;
+    }
+
+    .panduan__content-title img {
+        margin-right: 0;
+    }
+
+    .panduan__content-button {
+        justify-content: center;
+    }
+}
+/* END: panduan media query */

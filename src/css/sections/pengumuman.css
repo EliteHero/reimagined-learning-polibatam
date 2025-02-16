@@ -1,0 +1,108 @@
+.pengumuman {
+    display: flex;
+    flex-direction: column;
+    margin: 0 5rem 10rem 5rem;
+}
+
+.pengumuman__title {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: end;
+}
+
+.pengumuman__title-more {
+    display: flex;
+}
+
+.pengumuman__title h3 {
+    font-weight: bold;
+    color: var(--primary-color);
+}
+
+.pengumuman__title-more p {
+    font-weight: bold;
+    color: var(--primary-color);
+    text-decoration: underline;
+}
+
+.pengumuman__grid {
+    display: grid;
+    grid-template-columns: 3fr 1.3fr 2fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: 
+    'item1 item2 item3'
+    'item1 item2 item4';
+
+    height: 50vh;
+    gap: 1rem;
+}
+
+.pengumuman__grid-item1 { grid-area: item1; }
+.pengumuman__grid-item2 { grid-area: item2; }
+.pengumuman__grid-item3 { grid-area: item3; }
+.pengumuman__grid-item4 { grid-area: item4; }
+
+.pengumuman__grid-container {
+    position: relative;
+    overflow: hidden;
+    border-radius: 1.5vmin;
+}
+
+.pengumuman__grid-container img {
+    position: absolute;
+    object-fit: cover;
+    border-radius: 1.5vmin;
+
+    width: 100%;
+    height: 100%;
+
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: transform 0.5s ease-in-out;
+}
+
+.pengumuman__grid-container:hover img {
+    transform: scale(1.2);
+}
+
+.pengumuman__grid-container p {
+    position: absolute;
+    bottom: 0;
+    max-height: 50%;
+    max-width: 100%;
+
+    padding: 0 1rem;
+
+    font-weight: bold;
+    color: white;
+    
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.pengumuman__grid-gradient-bottom {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    background-image: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.8));
+    border-radius: 1.5vmin;
+}
+
+.pengumuman__grid-gradient-left {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    background-image: linear-gradient(to left, transparent, rgba(0, 0, 0, 0.8));
+    border-radius: 1.5vmin;
+}

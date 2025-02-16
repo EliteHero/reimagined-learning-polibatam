@@ -3,6 +3,7 @@
 @import url(sections/header.css);
 @import url(sections/hero.css);
 @import url(sections/panduan.css);
+@import url(sections/pengumuman.css);
 
 :root {
     --plus-jakarta-sans: "Plus Jakarta Sans", sans-serif;
@@ -163,3 +164,33 @@ h3 {
     }
 }
 /* END: panduan media query */
+
+/* START: pengumuman media query */
+@media screen and (max-width: 1024px) {
+    .pengumuman {
+        margin: 0 1rem 10rem 1rem;
+    }
+
+    .pengumuman__grid {
+        grid-template-columns: 1fr 2fr;
+        grid-template-rows: 2fr 1fr 1fr;
+        grid-template-areas: 
+        'item1 item1'
+        'item2 item3'
+        'item2 item4';
+
+        height: 100vh;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .pengumuman__grid {
+        grid-template-columns: 1fr;
+        grid-template-rows: 2fr 2fr 1fr 1fr;
+        grid-template-areas: 
+        'item1'
+        'item2'
+        'item3'
+        'item4';
+    }
+}

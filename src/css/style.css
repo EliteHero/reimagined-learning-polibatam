@@ -4,6 +4,7 @@
 @import url(sections/hero.css);
 @import url(sections/panduan.css);
 @import url(sections/pengumuman.css);
+@import url(sections/prodi.css);
 
 :root {
     --plus-jakarta-sans: "Plus Jakarta Sans", sans-serif;
@@ -14,6 +15,9 @@
     --color-if: #25a9e1;
     --color-gm: #8cc63e;
     --color-trm: #f05d22;
+    --color-an: #6E0FF3;
+    --color-trpl: #132E52;
+    --color-gim: #4F2C7C;
 }
 
 * {
@@ -49,6 +53,13 @@ h1 {
     line-height: 1.2;
 
     margin: 0;
+}
+
+h2 {
+    font-family: var(--plus-jakarta-sans);
+    font-size: clamp(1.5rem, 2vw, 2rem);
+    font-weight: normal;
+    line-height: 1.3;
 }
 
 
@@ -184,6 +195,11 @@ h3 {
 }
 
 @media screen and (max-width: 600px) {
+    .pengumuman__title {
+        flex-direction: column;
+        align-items: start;
+    }
+
     .pengumuman__grid {
         grid-template-columns: 1fr;
         grid-template-rows: 2fr 2fr 1fr 1fr;
@@ -192,5 +208,13 @@ h3 {
         'item2'
         'item3'
         'item4';
+    }
+}
+/* END: pengumuman media query */
+
+/* START: prodi media query */
+@media screen and (max-width: 1024px) {
+    .prodi {
+        margin: 0 1rem 10rem 1rem;
     }
 }

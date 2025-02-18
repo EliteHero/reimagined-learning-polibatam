@@ -8,14 +8,14 @@
     display: flex;
     width: 100%;
     justify-content: space-between;
-    align-items: end;
+    align-items: center;
 }
 
 .pengumuman__title-more {
     display: flex;
 }
 
-.pengumuman__title h3 {
+.pengumuman__title h2 {
     font-weight: bold;
     color: var(--primary-color);
 }
